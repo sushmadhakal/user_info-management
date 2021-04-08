@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>User Registration Form</title>
+    <%@ include file="header.jsp"%>
 </head>
 <body>
 <div>

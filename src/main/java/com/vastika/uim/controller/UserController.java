@@ -20,9 +20,21 @@ public class UserController {
        return "addUser";
     }
 
+    @RequestMapping(value = "/edit_user", method = RequestMethod.GET)
+    public String getEditUserForm(@RequestParam int id, Model model){
+        model.addAttribute("user", userService.getUserById(id));
+        return "editUser";
+    }
+
     @RequestMapping(value = "/save_user", method = RequestMethod.POST)
     public String saveUser(@ModelAttribute User user){
         userService.saveUser(user);
+        return "redirect: /list_user";
+    }
+
+    @RequestMapping(value = "/update_user", method = RequestMethod.POST)
+    public String updateUser(@ModelAttribute User user){
+        userService.updateUser(user);
         return "redirect: /list_user";
     }
 

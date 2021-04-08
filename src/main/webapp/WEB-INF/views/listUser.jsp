@@ -10,12 +10,14 @@
 <html>
 <head>
     <title>User List</title>
+    <%@ include file="header.jsp"%>
 </head>
 <body>
 <div>
     <h1>User List</h1>
 </div>
 <div>
+    <a href="/add_user">Add User</a>
     <c:if test="${!empty users}">
        <table>
            <thead>
@@ -47,7 +49,7 @@
                    <td>${u.comments}</td>
                    <td>${u.nationality}</td>
                    <td>
-                       <a href="">Edit</a>
+                       <a href="edit_user?id=${u.id}">Edit</a>
                        <a href="delete_user?id=${u.id}">Delete</a>
                    </td>
                </tr>
