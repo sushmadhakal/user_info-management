@@ -1,0 +1,7 @@
+com\vastika\uim\controller\HelloController.class
+com\vastika\uim\repository\UserRepositoryImpl.class
+com\vastika\uim\service\UserService.class
+com\vastika\uim\repository\UserRepository.class
+com\vastika\uim\service\UserServiceImpl.class
+com\vastika\uim\controller\UserController.class
+com\vastika\uim\model\User.class
